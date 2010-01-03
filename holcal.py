@@ -1,5 +1,4 @@
 from datetime import date
-from calendar import Calendar
 
 class HolidayCalendar:
     """Abstract class representing a holiday calendar.
@@ -17,13 +16,13 @@ class HolidayCalendar:
 class BasicHolidayCalendar(HolidayCalendar):
     """Basic Holiday Calendar expects a file in the following format(example):
     
-    R 12-25 # Xmas
-    R 1-1 # New Years
-    R 7-4 # 4th of July
-    W SU # Weekends
-    H 2009-3-14 # Pi day!
-    H 2009-10-24 # Avogadro
-    E 2012-12-25 #The end of the world...Xmas is cancelled
+    R 12-25       # Xmas
+    R 1-1         # New Years
+    R 7-4         # 4th of July
+    W SU          # Weekends
+    H 2009-3-14   # Pi day!
+    H 2009-10-24  # Avogadro
+    E 2012-12-25  # The end of the world...Xmas is cancelled
     ...
     
     R indicates a recurring holiday, that occurs every year on the same day, and is in the form MM-DD
@@ -31,7 +30,8 @@ class BasicHolidayCalendar(HolidayCalendar):
     E is an exception to a recurring holiday, and is in the format YYYY-MM-DD.
     H is a holiday, and like an exception, must be in the format YYYY-MM-DD
     
-    The # is a comment, and causes the parser to ignore the rest of the line. There are no block comments."""
+    The # is a comment, and causes the parser to ignore the rest of the line. There are no block comments.
+    Leading and trailing whitespace is disregarded; unknown rules are ignored."""
     days = ['M', 'T', 'W', 'R', 'F', 'S', 'U']
     def __init__(self, filename):
         self.holidays = []
