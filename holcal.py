@@ -21,7 +21,7 @@ class BasicHolidayCalendar(HolidayCalendar):
     R 7-4         # 4th of July
     W SU          # Weekends
     H 2009-3-14   # Pi day!
-    H 2009-10-24  # Avogadro
+    H 2009-10-23  # Avogadro
     E 2012-12-25  # The end of the world...Xmas is cancelled
     ...
     
