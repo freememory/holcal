@@ -100,16 +100,5 @@ class BasicHolidayCalendar(HolidayCalendar):
                 raise Exception('Weekend day not recognized.')
         
         self.weekend_days = wkendstr
- 
-#print 'hello!'       
-#if __name__=='main':
-from datetime import date
-print 'hello!'
-h = BasicHolidayCalendar('/Users/macobas/holcalUSA.txt')
-d = date(2010,12,25)
-if h.is_business_day(d):
-    print 'biz'
-else:
-    print 'nb'
     
     
