@@ -1,6 +1,6 @@
 from datetime import date
 
-class HolidayCalendar:
+class HolidayCalendar(object):
     """Abstract class representing a holiday calendar.
     
     Do not instantiate."""
